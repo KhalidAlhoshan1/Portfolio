@@ -1,3 +1,0 @@
-Computer generates random number between 1 and 15, user tries to guess correctly, save user high score in json file.
-
-Must change filename path so the program can create the JSON file for high score correctly.
