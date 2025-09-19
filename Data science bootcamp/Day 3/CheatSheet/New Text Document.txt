@@ -1,0 +1,5 @@
+Seaborn library:
+https://seaborn.pydata.org/examples/different_scatter_variables.html
+
+Plot library: 
+https://plotly.com/python/

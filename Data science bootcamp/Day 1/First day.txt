@@ -1,0 +1,20 @@
+Types of data: structured, semi-structured, and unstructured such as photos videos audio
+
+How to look at data as a data analyst or AI engineer.
+
+Data mining vs Data analysis
+
+Supervised(data is labeled) and unsupervised(unlabeled) learning.
+
+Data cleaning
+
+Dataset issues: outliers, missing data, bias, duplicate
+
+How to clean and prepare data: Normalization, feature selection, encoding, remove null and duplicate data
+
+
+
+Tomorrow practical session, apply what we learn on datasets.
+
+data will be sent as csb or excel, and we will use Python
+

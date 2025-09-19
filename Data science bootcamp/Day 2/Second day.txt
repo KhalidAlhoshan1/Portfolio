@@ -1,0 +1,90 @@
+Introduction to datasets.
+Row = x
+Column = y
+
+we started with dataset related to the titanic (not the movie) as a tutorial
+
+pClass 1->3, 1 being lowest level on the ship
+
+
+we used google colab
+
+we can drag and drop the dataset in the folder tab inside google colab
+
+at the beginning of each notebook you want to call libraries
+
+
+##Libraries used:
+
+import numpy as np # related to mathematical equations
+import pandas as pd # Very important and popular library, it deals with the data and cells
+import matplotlib.pyplot as plt # Graphs
+import seaborn as sns # Graphs and analysis
+
+code used to read csv file:
+td = pd.read_csv('put file path here')
+td.head() # this function reads the first 5 head records, you can put a number in the brackets to decide how many
+
+##Preprocessing data:
+
+sns.heatmap(td.insull(), yticklabels=False, cbar=False, cmap='viridis')
+the part that matters the most is upto d.insull(), what comes after is design
+
+This reads the missing data (null) from the variable td that has the values from csv file and visualizes it in a heatmap.
+
+in the tutorial csv(titanic), we saw that Cabin column has more missing, so we delete the column, Embarked has only one missing value so we can delete the
+cell at the end, age is what we have to focus on and deal with first.
+
+we want to visualize the age column by itself 
+
+td['Age'].hist(bins=30, color='darkred', alpha= 0.7)
+
+this gives us Age graph, the age on x axis and the number of passengers on y axis, similar to sns.heatmap(), most of the code is just design the only thing
+that matters is td['Age'].hist('Here is just design values')
+
+to fill the missing Age data, we compare the fare ticket to the age and fill in the blanks.
+
+td['Fare'].hist(bins=30, color='darkred', alpha= 0.7) # I forgot what this does
+
+plt.figure(figuresize=(12,7)) # we make a new figure using plt, and we fill the figure using sns
+sns.boxplot(x='Pclass', y='Age', data=td, palette='winter') # we made Pclass column and Age row and use them to find the average to fill in the blanks
+
+
+This is a function to fill in the missing Age data:
+
+def agenull(cols):
+  Age  = cols[0] # 0 and 1 is a reference to the index of the data in a list
+  Pclass = cols[1]
+
+  if pd.isnull(Age):
+    if Pclass == 1:
+      return 37
+    elif Pclass == 2:
+      return 29
+    else:
+      return 24
+  else:
+    return Age #If the value is not NULL this is used to return the Age the same, since its not NULL
+
+
+Now we apply the function:
+                 i=0   i=1
+td['Age'] = td[['Age', 'Pclass']].apply(agenull, axis=1) -> td[['Age', 'Pclass']], here 'Age' is index 0, and 'Pclass' is 1
+
+
+this is something we did not use, td['Age'].fillna(td['Age'].mean()) #This fills the missing data using the mean of the data we already have.
+
+
+
+Some AI models only accept numerical data, so we have to transform categorical data (male, female) to numerical
+as an example in the dataset from titanic, we have a row called Sex, we changed the row and named it Male and 1 means that the passenger is male and 0 is female
+
+
+we make a new variable to change the categorical data (Sex) into numerical:
+sex = pd.get_dummies(td['Sex']),drop_first=True -> This changes the data in Sex column and makes it 0 (female) and 1 (male)
+embarked = pd.get_dummies(td['Embarked'],drop_first=True) - this changes the data S,Q,C into 0 and 1, if both S and Q are 0 then C is 1
+
+td.drop(['Sex', 'Embarked', 'Name', 'Ticket'], axis=1, inplace=True) -> we delete data that is not needed
+
+td = pd.concat([td, sex, embarked], axis=1) -> we made a new dataset called td, we gave it the previous dataset td and new sex and embarked concacted
+

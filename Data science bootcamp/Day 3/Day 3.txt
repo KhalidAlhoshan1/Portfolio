@@ -1,0 +1,26 @@
+Today's goal we will use the dataset that we cleaned and turn it into something useful (data analysis).
+
+EDA(Exploratory Data Analysis)
+
+Famous questions to start analysis: Which is more or less? if x is changed what happens to y? What's the percentage of x compared to y?
+
+Some chart types:
+Histogram → distribution of one numeric variable
+
+Bar Chart → compare categories
+
+Box Plot → summary of distribution (median, spread, outliers)
+
+Scatter Plot → relationship between two numeric variables
+
+Heatmap → visualize correlation/matrix values
+
+Choose based on project type
+
+Causation does not mean correlation, sometimes connections are random even though it seems logical
+
+Common mistakes:
+- Small sample size
+- Choosing pretty charts/diagrams over something clear
+- Meaningless numbers (Agent column it was ID "string" not numbers)
+

@@ -1,0 +1,49 @@
+1. Types of Data
+
+Structured data → organized in rows/columns (databases, Excel sheets). Easy to search/analyze.
+
+Semi-structured data → not fully organized but has tags/markers (JSON, XML, log files).
+
+Unstructured data → no fixed format (photos, videos, audio, free text). Harder to process, needs AI tools (like NLP for text, CV for images).
+
+2. How to Look at Data (Analyst vs AI Engineer)
+
+Data Analyst → looks for trends, insights, and patterns to support decisions. Works with tools like SQL, Excel, Tableau.
+
+AI Engineer → prepares and uses data to train models, focusing on algorithms, feature engineering, and machine learning.
+
+3. Data Mining vs Data Analysis
+
+Data mining → discovering hidden patterns in large datasets (more automatic, exploratory).
+
+Data analysis → testing hypotheses, answering specific questions (more manual, guided).
+
+4. Supervised vs Unsupervised Learning
+
+Supervised learning → labeled data (input → output). Example: predicting house prices, spam email detection.
+
+Unsupervised learning → unlabeled data. Model finds structure/patterns itself. Example: clustering customers by behavior, grouping similar images.
+
+5. Data Cleaning
+
+Process of fixing and preparing raw data so it’s usable for analysis or AI models.
+
+6. Dataset Issues
+
+Outliers → extreme values (can distort results).
+
+Missing data → gaps in dataset (e.g., no age recorded).
+
+Bias → skewed data that doesn’t represent reality (e.g., dataset mostly from one group).
+
+Duplicates → repeated entries that can affect results.
+
+7. Examples of Cleaning/Preparation
+
+Normalization → adjusting values to a standard range so features are treated fairly by algorithms.
+
+Feature selection → choosing the most relevant variables to reduce noise and improve performance. (not using peoples names in datasets)	
+
+Encoding → converting categorical data to numbers (e.g., "Male/Female" → 0/1).
+
+Remove null/duplicate data → delete or fill missing entries, and drop duplicate rows.
