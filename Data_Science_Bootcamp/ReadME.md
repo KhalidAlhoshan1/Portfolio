@@ -9,9 +9,9 @@ I gained hands-on experience with the entire data analysis workflow, from unders
 - Data Storytelling: I learned to use Exploratory Data Analysis (EDA) to find insights and create effective visualizations to tell a story with data.
 
   #Project files
-  - [Day 1](Data%20science%20bootcamp/Day%201/): These text files encompass my notes taken during the lecture, as the lecture was a short one given it was an introduction to Data Analysis
-  - [Day 2](Data%20science%20bootcamp/Day%202/): This Google Colab notebook contains my work on data cleaning and preparations. It shows my ability to handle raw datasets and prepare them for analysis
-  - [Day 3](Data%20science%20bootcamp/Day%203/): This notebook showcases my final project where I performed a full EDA. It includes the charts I generated from the cleaned data
+  - [Day 1](Data_Science_Bootcamp/Day_1/): These text files encompass my notes taken during the lecture, as the lecture was a short one given it was an introduction to Data Analysis
+  - [Day 2](Data_Science_Bootcamp/Day_2/): This Google Colab notebook contains my work on data cleaning and preparations. It shows my ability to handle raw datasets and prepare them for analysis
+  - [Day 3](Data_Science_Bootcamp/Day_3/): This notebook showcases my final project where I performed a full EDA. It includes the charts I generated from the cleaned data
  
 
 # Skills & Technologies:
